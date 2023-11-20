@@ -1,36 +1,42 @@
 package com.fuctura.biblioteca.Models;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+
+import com.fuctura.biblioteca.enums.Tamanho;
+
+import javax.persistence.*;
+
 
 @Entity
-@Table(name = "TB_lIVROS")
 public class Livros {
-    @Id
-    private int id;
+@Id
+@GeneratedValue
+    private Integer id;
     private String titulo;
     private String nome_autor;
     private String texto;
 
+    private Tamanho tamanho;
+@ManyToOne
+@JoinColumn(name = "categoria_id")
     private Categoria categoria;
 
     public Livros() {
     }
 
-    public Livros(int id, String titulo, String nome_autor, String texto, Categoria categoria) {
+    public Livros(Integer id, String titulo, String nome_autor, String texto, Tamanho tamanho, Categoria categoria) {
         this.id = id;
         this.titulo = titulo;
         this.nome_autor = nome_autor;
         this.texto = texto;
+        this.tamanho = tamanho;
         this.categoria = categoria;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -58,11 +64,11 @@ public class Livros {
         this.texto = texto;
     }
 
-    public Categoria getCategoria() {
-        return categoria;
+    public Tamanho getTamanho() {
+        return tamanho;
     }
 
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
+    public void setTamanho(Tamanho tamanho) {
+        this.tamanho = tamanho;
     }
 }
