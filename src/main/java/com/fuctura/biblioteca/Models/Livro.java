@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 
 @Entity
-public class Livros {
+public class Livro {
 @Id
 @GeneratedValue
     private Integer id;
@@ -20,10 +20,10 @@ public class Livros {
 @JoinColumn(name = "categoria_id")
     private Categoria categoria;
 
-    public Livros() {
+    public Livro() {
     }
 
-    public Livros(Integer id, String titulo, String nome_autor, String texto, Tamanho tamanho, Categoria categoria) {
+    public Livro(Integer id, String titulo, String nome_autor, String texto, Tamanho tamanho, Categoria categoria) {
         this.id = id;
         this.titulo = titulo;
         this.nome_autor = nome_autor;

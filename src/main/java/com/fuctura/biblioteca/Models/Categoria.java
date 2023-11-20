@@ -15,7 +15,7 @@ public class Categoria {
 
     private String descricao;
 @OneToMany(mappedBy = "categoria")
-    private List<Livros> livros = new ArrayList<>();
+    private List<Livro> livros = new ArrayList<>();
 
     public Categoria() {
     }
