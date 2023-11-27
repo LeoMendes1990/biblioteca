@@ -20,7 +20,7 @@ public class CategoriaController {
 
     //@GetMapping("/{id}") = buscar por id
     //@GetMapping() = buscar todos
-    //@PostMapping(obj) = atualizar no banco
+    //@PostMapping(obj) = inserir no banco
     //@PutMapping(obj) = atualizar no banco
     //@DeleteMapping(id) = deletar por id
 
