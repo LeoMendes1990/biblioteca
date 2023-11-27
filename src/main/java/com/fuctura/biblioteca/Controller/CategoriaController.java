@@ -26,26 +26,36 @@ public class CategoriaController {
 
     @GetMapping(value = "/{id}")
 
-    public Categoria findById(@PathVariable Integer id){
+    public Categoria findById(@PathVariable Integer id) {
 
         Categoria obj = categoriaService.findByid(id);
         return obj;
     }
+
     @GetMapping
-    public List<Categoria> findAll(){
+    public List<Categoria> findAll() {
         List<Categoria> list = categoriaService.findAll();
         return list;
     }
 
     @PostMapping
-    public Categoria save(@RequestBody Categoria categoria){
+    public Categoria save(@RequestBody Categoria categoria) {
         return categoriaService.save(categoria);
     }
 
+    @DeleteMapping("/{id}")
+
+    public void categoriaDelete(@PathVariable Integer id) {
+        categoriaService.CategoriaDelete(id);
+
+    }
+    @PutMapping("/{id}")
+    public Categoria updateCategoria(@PathVariable Integer id, @RequestBody Categoria categoria){
+        return categoriaService.updateCategoria(categoria,id);
 
 
 
-
+    }
 
 
 }
