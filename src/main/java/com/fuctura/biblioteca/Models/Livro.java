@@ -1,6 +1,7 @@
 package com.fuctura.biblioteca.Models;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fuctura.biblioteca.enums.Tamanho;
 
 import javax.persistence.*;
@@ -8,16 +9,17 @@ import javax.persistence.*;
 
 @Entity
 public class Livro {
-@Id
-@GeneratedValue
+    @Id
+    @GeneratedValue
     private Integer id;
     private String titulo;
     private String nome_autor;
     private String texto;
 
     private Tamanho tamanho;
-@ManyToOne
-@JoinColumn(name = "categoria_id")
+    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "categoria_id")
     private Categoria categoria;
 
     public Livro() {

@@ -17,9 +17,7 @@ public class LivroController {
     @Autowired
   private LivroService livroService;
 
-    @PostMapping("/adicionar")
-    public ResponseEntity<Livro> adicionarLivro(@RequestBody Livro livro){
-        Livro livroSalvo = livroService.salvarLivro(livro);
-        return new ResponseEntity<>(livroSalvo, HttpStatus.CREATED);
-    }
+
+
+
 }
