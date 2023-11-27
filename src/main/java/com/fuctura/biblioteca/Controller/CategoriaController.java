@@ -38,7 +38,9 @@ public class CategoriaController {
     }
 
     @PostMapping
-    public Categoria save(@RequestBody)
+    public Categoria save(@RequestBody Categoria categoria){
+        return categoriaService.save(categoria);
+    }
 
 
 
