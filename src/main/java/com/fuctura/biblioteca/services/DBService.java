@@ -1,7 +1,7 @@
 package com.fuctura.biblioteca.services;
 
-import com.fuctura.biblioteca.Models.Categoria;
-import com.fuctura.biblioteca.Models.Livro;
+import com.fuctura.biblioteca.models.Categoria;
+import com.fuctura.biblioteca.models.Livro;
 import com.fuctura.biblioteca.enums.Tamanho;
 import com.fuctura.biblioteca.repositories.CategoriaRepository;
 import com.fuctura.biblioteca.repositories.LivroRepository;

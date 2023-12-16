@@ -1,4 +1,4 @@
-package com.fuctura.biblioteca.Profiles;
+package com.fuctura.biblioteca.profiles;
 
 import com.fuctura.biblioteca.services.DBService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,21 +14,17 @@ public class DevProfile {
     @Autowired
     private DBService dbService;
 
-
+    //@Value pra quer servi essa anotação
     @Value("${spring.jpa.hibernate.ddl-auto}")
     private String ddl;
 
     @Bean
-    public boolean instanciaDB(){
-        if(ddl.equals("update")){
+    public boolean instanciaDB() {
+        if (ddl.equals("drop")) {
             this.dbService.instanciaDB();
         }
         return false;
     }
 
-//    @Bean
-//    public void instanciaDB() {
-//
-//        this.dbService.instanciaDB();
-//    }
+
 }

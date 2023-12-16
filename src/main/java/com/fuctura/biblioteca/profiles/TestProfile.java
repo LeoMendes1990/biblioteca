@@ -1,4 +1,4 @@
-package com.fuctura.biblioteca.Profiles;
+package com.fuctura.biblioteca.profiles;
 
 import com.fuctura.biblioteca.services.DBService;
 import org.springframework.beans.factory.annotation.Autowired;

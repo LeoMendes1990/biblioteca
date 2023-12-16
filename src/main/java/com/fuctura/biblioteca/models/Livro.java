@@ -1,4 +1,4 @@
-package com.fuctura.biblioteca.Models;
+package com.fuctura.biblioteca.models;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
